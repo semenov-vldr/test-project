@@ -1,11 +1,13 @@
 {
-  "name": "gulp-boilerplate",
+  "name": "work-project",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
+  "homepage": "https://semenov-vldr.github.io/test-project",
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "del": "^5.1.0",
+    "gh-pages": "^4.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-concat": "^2.6.1",
@@ -18,8 +20,12 @@
     "gulp-sourcemaps": "^2.6.5"
   },
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "deploy": "gh-pages -d docs"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Semenov Vladimir",
+  "license": "ISC",
+  "dependencies": {
+    "@fancyapps/ui": "^4.0.31"
+  }
 }
