@@ -4,8 +4,14 @@ block variables
   - var title = "Главная"
   - var pageClass = ''
   - var activePage = 'index'
+  - var gh_pages = "https://semenov-vldr.github.io/test-project"
+
+  mixin link(href, name)
+    a(href=gh_pages+href)= name
+
+
 
 block content
   h1(style="color: red; font-size: 40px; text-align: center") Hello world!
   div просто добавили текст для теста
-  a(href="/about.html") Ccылка настраницу О нас
+  +link('about.html', 'О нас')
