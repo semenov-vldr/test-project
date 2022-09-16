@@ -1,0 +1,42 @@
+header.header
+  .header__container
+
+    a.header__logo(href="/")
+      svg(width="181" height="40" fill='#fff')
+        use(href='assets/img/sprite.svg#header-logo')
+
+    button.header__burger
+
+    ul.header__nav.header-nav
+      li.header-nav__item
+        a.header-nav__link(href="/") Услуги
+      li.header-nav__item
+        a.header-nav__link(href="/") Цены
+      li.header-nav__item
+        a.header-nav__link(href="/") Примеры работ
+      li.header-nav__item
+        a.header-nav__link(href="/") О нас
+      li.header-nav__item
+        a.header-nav__link(href="/") Контакты
+
+    .header__contact.header-contact
+      button(type="button").header-contact__menu-tablet Связаться с нами
+        span Телефон, почта, адрес
+
+      ul.header-contact__list
+
+        li.header-contact__item
+          a.header-contact__link(href="tel:+74999940097") +7 499 994 00 97
+          span.header-contact__description пн-пт с 09:00 до 18:00
+
+        li.header-contact__item
+          a.header-contact__link(href="") sales@spirit-bear.ru
+          span.header-contact__description круглосуточно, без выходных
+
+        li.header-contact__item
+          a.header-contact__link МО, Солнечногорск,
+            br
+            | д. Пешки, цех №22
+
+
+

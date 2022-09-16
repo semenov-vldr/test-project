@@ -1,0 +1,185 @@
+.header
+  position: absolute
+  z-index: 1
+  width: 100%
+  @media (max-width: $width-mobile)
+    max-height: 66px
+    &.js-active
+      background-color: #0C131A
+      position: fixed
+      z-index: 100
+    &.js-active .header-contact__list,
+    &.js-active .header-nav
+      display: flex
+
+  &__container
+    max-width: 1840px
+    box-sizing: content-box
+    padding: 10px 40px
+    display: flex
+    align-items: center
+    gap: 32px
+    @media (max-width: $width-mobile)
+      justify-content: space-between
+      position: relative
+      padding: 10px 20px
+      display: grid
+      grid-template-columns: 1fr 1fr
+
+  &__logo
+    @media (max-width: $width-mobile)
+      grid-column: span 1
+
+  &-nav
+    display: flex
+    align-items: center
+    gap: 5px
+    @media (max-width: $width-mobile)
+      grid-column: 1 span
+      display: none
+      position: fixed
+      flex-direction: column
+      top: 66px
+      left: 20px
+      right: 20px
+      height: auto
+      z-index: 1
+      gap: 0
+      background-color: cornflowerblue
+      padding: 0 20px
+      border-radius: 4px
+
+
+  &-nav__item
+    @media (max-width: $width-mobile)
+      padding: 25px 12px
+
+
+  &-nav__link
+    white-space: nowrap
+    padding: 8px 20px
+    color: rgba($white, 0.7)
+    &:hover
+      color: rgba($white, 1)
+    &:active
+      background-color: $frosted-top
+      border-radius: 4px
+
+
+  &-contact
+    position: relative
+    display: flex
+    margin-left: auto
+
+    &__list
+      display: flex
+      align-items: center
+      gap: 24px
+      &.js-active
+        display: flex
+      @media (max-width: 1400px)
+        display: none
+        position: absolute
+        bottom: -15px
+        right: 0
+        flex-direction: column
+        align-items: flex-start
+        gap: 0
+        transform: translateY(100%)
+        width: 320px
+        border-radius: 4px
+      @media (max-width: $width-mobile)
+        grid-column: span 1
+        display: none
+        position: fixed
+        flex-direction: column
+        top: 66px
+        left: 20px
+        right: 20px
+        height: auto
+        z-index: 1
+        gap: 0
+        background-color: cornflowerblue
+        padding: 0 20px
+        border-radius: 4px
+        &.js-active
+          display: flex
+
+    &__item
+      position: relative
+      &::after
+        position: absolute
+        content: ""
+        background-image: url('./assets/img/icons/decor-contact.svg')
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center
+        width: 12px
+        height: 12px
+        top: 10px
+        right: 10px
+      @media (max-width: 1400px)
+        position: relative
+        padding: 10px 40px 10px 10px
+        width: 100%
+        display: flex
+        flex-direction: column
+        gap: 5px
+        justify-content: center
+        background-color: $frosted-top
+        &:hover
+          background-color: rgba($frosted-top, 0.8)
+        .icon-header-contact
+          position: absolute
+          right: 18px
+          top: 50%
+          transform: translateY(-50%)
+
+
+    &__link
+      white-space: nowrap
+
+    &__description
+      display: block
+      font-size: 12px
+      line-height: 1
+      color: rgba(#fff, 0.6)
+
+    &__menu-tablet
+      display: none
+      white-space: nowrap
+      margin-left: auto
+      cursor: pointer
+      background-color: $frosted-top
+      padding: 8px 16px
+      border-radius: 4px
+      span
+        text-align: left
+        display: block
+        font-size: 10px
+        color: rgba($white, 0.6)
+      @media(min-width: $width-mobile) and (max-width: 1400px)
+        display: block
+
+
+.header__burger
+  display: none
+  cursor: pointer
+  @media (max-width: $width-mobile)
+    grid-column: 2 / span 1
+    justify-self: end
+    position: relative
+    display: block
+    background-image: url('./assets/img/icons/burger.svg')
+    background-position: center
+    background-size: 32px 20px
+    background-repeat: no-repeat
+    width: 32px
+    height: 20px
+    background-color: tomato
+    z-index: 2
+
+
+
+
+

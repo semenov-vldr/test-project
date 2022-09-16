@@ -23,7 +23,7 @@ module.exports = function () {
       $.gulp.series("style:libs:dev")
     );
     $.gulp.watch(
-      [$.path.src + "/styles/**/*.sass", $.path.src + "/components/**/*.sass"],
+      [$.path.src + "/styles/**/*.sass", $.path.src + "/styles/**/*.css", $.path.src + "/components/**/*.sass"],
       $.gulp.series("style:dev")
     );
     $.gulp.watch(
